@@ -5,6 +5,7 @@
     align-items: center;
     width: 310px;
     height: 310px;
+    z-index: 1;
 }
 
 .login::after {

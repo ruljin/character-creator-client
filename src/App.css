@@ -4,6 +4,10 @@
     font-family: 'Atma', 'cursive';
 }
 
+body {
+    margin: 0;
+}
+
 h1 {
     font-size: 22px;
     font-weight: normal;
