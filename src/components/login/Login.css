@@ -1,0 +1,43 @@
+.login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 310px;
+    height: 310px;
+}
+
+.login::after {
+    content: "";
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    top: 0;
+    background: rgba(161, 149, 149, .7);
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.login__header {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.login__buttons {
+    display: contents;
+}
+
+.login__errors {
+    min-height: 18px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #DC143C;
+    text-shadow: 0px 4px 4px rgba(220, 20, 60, 0.5);
+    margin-bottom: 40px;
+}
+
+.login__copyrights {
+    font-size: 12px;
+}
