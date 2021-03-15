@@ -49,3 +49,25 @@ h1 {
 .button--negative {
     background-color: #95A1A1;
 }
+
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .input {
+        height: 30px;
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+
+    .input::placeholder {
+        font-size: 16px;
+    }
+
+    .button {
+        height: 30px;
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+}

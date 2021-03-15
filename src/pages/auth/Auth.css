@@ -19,3 +19,14 @@
     background-repeat: no-repeat;
     background-position: -440px -360px;
 }
+
+@media (min-width: 1440px) {
+    .auth {
+        align-items: flex-start;
+    }
+
+    .auth::after {
+        background-position: unset;
+        background-size: cover;
+    }
+}

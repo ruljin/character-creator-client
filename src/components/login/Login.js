@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 
 const Login = () => {
-  const [error, setSerror] = useState();
+  const [error, setSerror] = useState("Provided code is invalid!");
 
   const onLoadingCharacter = () => {
     console.log("onLoadingCharacter");
