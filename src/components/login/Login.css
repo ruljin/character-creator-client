@@ -43,6 +43,17 @@
     font-size: 12px;
 }
 
+.login__link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login__link:hover {
+    transition: 0.5s;
+    color: #9BA195;
+}
+
 @media (min-width: 1440px) {
     .login {
         width: 515px;

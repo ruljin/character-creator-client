@@ -49,7 +49,25 @@ const Login = () => {
       </div>
       <div className="login__errors">{error}</div>
       <div className="login__copyrights">
-        &#169; Ruljin & Ulwothar, All rights reserved
+        &#169;{" "}
+        <a
+          className="login__link"
+          href="https://github.com/ruljin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ruljin
+        </a>
+        &{" "}
+        <a
+          className="login__link"
+          href="https://github.com/Ulwothar"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ulwothar
+        </a>
+        , All rights reserved
       </div>
     </div>
   );
