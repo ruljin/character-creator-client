@@ -19,6 +19,18 @@
     background-position-y: -32px;
 }
 
+.pin--absolute {
+    position: absolute;
+}
+
+.pin--top {
+    top: -62.5px;
+}
+
+.pin--bottom {
+    bottom: -62.5px;
+}
+
 @media (min-width: 1440px) {
     .pin {
         width: 150px;
