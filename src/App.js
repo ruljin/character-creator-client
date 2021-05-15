@@ -1,8 +1,13 @@
 import "./App.css";
-import Auth from "./pages/auth/Auth";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes } from "./Routes";
 
 function App() {
-  return <Auth />;
+  return (
+    <Router>
+      <Routes />
+    </Router>
+  );
 }
 
 export default App;
