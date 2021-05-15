@@ -1,15 +1,19 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Redirect } from "react-router-dom";
 import "./Login.css";
 
-const Login = () => {
-  const [error, setSerror] = useState("Provided code is invalid!");
+const Login = (props) => {
+  const { loading, error, handleGetCharacter } = props;
+  const [value, setValue] = useState("");
+  const [shouldRedirect, setShouldRedirect] = useState(false);
 
-  const onLoadingCharacter = () => {
-    console.log("onLoadingCharacter");
-  };
+  async function onLoadingCharacter() {
+    const callback = await handleGetCharacter(value);
+    callback === "OK" && setShouldRedirect(true);
+  }
 
   const onCreatingNewCharacter = () => {
-    console.log("onCreatingNewCharacter");
+    setShouldRedirect(true);
   };
 
   const buttons = [
@@ -25,6 +29,15 @@ const Login = () => {
     },
   ];
 
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setValue(e.target.value);
+  };
+
+  if (shouldRedirect) {
+    return <Redirect to="/character" />;
+  }
+
   return (
     <div className="login">
       <div className="login__background" />
@@ -34,20 +47,27 @@ const Login = () => {
       <div className="login__buttons">
         <input
           className="input"
+          type="text"
           name="characterCode"
           placeholder="Enter character code"
+          value={value}
+          onChange={(e) => onInputChange(e)}
+          disabled={loading}
         />
         {buttons.map((button) => (
           <button
             key={`button-${button.text}`}
             className={`button ${button.class}`}
             onClick={button.function}
+            disabled={loading}
           >
             {button.text}
           </button>
         ))}
       </div>
-      <div className="login__errors">{error}</div>
+      <div className="login__errors">
+        {error && <>Provided code is invalid!</>}
+      </div>
       <div className="login__copyrights">
         &#169;{" "}
         <a

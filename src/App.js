@@ -1,9 +1,13 @@
 import "./App.css";
-import Auth from "./pages/auth/Auth";
-import Home from "./pages/home/Home";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes } from "./Routes";
 
 function App() {
-  return <Home />;
+  return (
+    <Router>
+      <Routes />
+    </Router>
+  );
 }
 
 export default App;
