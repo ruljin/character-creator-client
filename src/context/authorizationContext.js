@@ -23,16 +23,12 @@ const useAuthorization = () => {
   );
 
   useEffect(() => {
-    if (character) {
-      setInStorage("character", JSON.stringify(character));
-    }
+    character && setInStorage("character", JSON.stringify(character));
   }, [character]);
 
   useEffect(() => {
-    if (isAuthenticated) {
+    isAuthenticated &&
       setInStorage("authentication", JSON.stringify(isAuthenticated));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
   return {
