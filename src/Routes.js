@@ -1,28 +1,23 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { getCharacterFromStorage } from "./utils/getCharacterFromStorage";
+import React, { useContext } from "react";
+import { Switch, Route } from "react-router-dom";
+import { AuthorizationContext } from "./context/authorizationContext";
 import Auth from "./pages/auth/Auth";
-import Home from "./pages/home/Home";
+import { Layout } from "./Layout";
+import { Page } from "./Page";
 
 export function Routes() {
-  const characterLoaded = getCharacterFromStorage();
+  const { isAuthenticated } = useContext(AuthorizationContext);
 
   return (
     <Switch>
-      {characterLoaded ? (
-        <Redirect from="/" to="/character" />
+      {isAuthenticated ? (
+        <Layout>
+          <Page />
+        </Layout>
       ) : (
         <Route path="/">
           <Auth />
         </Route>
-      )}
-
-      {characterLoaded ? (
-        // <Page>
-        <Home />
-      ) : (
-        // </Page>
-        <Redirect to="/" />
       )}
     </Switch>
   );

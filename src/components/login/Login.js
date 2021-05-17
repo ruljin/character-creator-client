@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Redirect } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { AuthorizationContext } from "../../context/authorizationContext";
 import "./Login.css";
 
 const Login = (props) => {
   const { loading, error, handleGetCharacter } = props;
+  const { onSetAuthentication } = useContext(AuthorizationContext);
   const [value, setValue] = useState("");
-  const [shouldRedirect, setShouldRedirect] = useState(false);
 
   async function onLoadingCharacter() {
     const callback = await handleGetCharacter(value);
-    callback === "OK" && setShouldRedirect(true);
+    callback === "OK" && onSetAuthentication(true);
   }
 
   const onCreatingNewCharacter = () => {
-    setShouldRedirect(true);
+    onSetAuthentication(true);
   };
 
   const buttons = [
@@ -33,10 +33,6 @@ const Login = (props) => {
     e.preventDefault();
     setValue(e.target.value);
   };
-
-  if (shouldRedirect) {
-    return <Redirect to="/character" />;
-  }
 
   return (
     <div className="login">

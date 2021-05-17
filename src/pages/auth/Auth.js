@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthorizationContext } from "../../context/authorizationContext";
 import { getCharacter } from "../../services/characterCrud";
-import { setInStorage } from "../../utils/setInStorage";
 import Login from "../../components/login/Login";
 import "./Auth.css";
 
 const Auth = () => {
+  const { onSetCharacter } = useContext(AuthorizationContext);
   const [loading, setLoading] = useState(false);
   const [error, setSerror] = useState(false);
 
@@ -13,13 +14,12 @@ const Auth = () => {
     return new Promise((resolve) => {
       getCharacter(code)
         .then((response) => {
-          setInStorage("character", JSON.stringify(response.character));
+          onSetCharacter(response.character);
           setSerror(false);
           setLoading(false);
           resolve("OK");
         })
         .catch((error) => {
-          console.log("error", error);
           setSerror(true);
           setLoading(false);
           resolve("error");
