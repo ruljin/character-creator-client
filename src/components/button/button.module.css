@@ -1,0 +1,26 @@
+.button {
+  cursor: pointer;
+  width: 235px;
+  margin-bottom: 15px;
+  background-color: #9b95a1;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.primary {
+  background-color: #9ba195;
+}
+
+.secondary {
+  background-color: #95a1a1;
+}
+
+@media (min-width: 1440px) {
+  .button {
+    height: 30px;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}

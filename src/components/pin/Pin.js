@@ -1,10 +1,17 @@
 import React from "react";
-import "./Pin.css";
+import PropTypes from "prop-types";
+import clsx from "clsx";
+import styles from "./pin.module.css";
 
-const Pin = ({ pinClass, absolute }) => {
-  return (
-    <div className={`pin ${pinClass} ${absolute && "pin--absolute"}`}></div>
-  );
+export const Pin = ({ className, absolute }) => {
+  const classes = clsx(styles.pin, className, {
+    [styles.absolute]: absolute,
+  });
+
+  return <div className={classes} />;
 };
 
-export default Pin;
+Pin.propTypes = {
+  className: PropTypes.string,
+  absolute: PropTypes.bool,
+};
