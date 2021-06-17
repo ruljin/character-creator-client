@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { getCharacter } from "../../services/characterCrud";
+import { getCharacter } from "../../resources/characters/index";
 import { setInStorage } from "../../utils/setInStorage";
-import Login from "../../components/login/Login";
-import "./Auth.css";
+import { Login } from "./login/Login";
+import styles from "./auth.module.css";
 
-const Auth = () => {
+export const Auth = () => {
   const [loading, setLoading] = useState(false);
-  const [error, setSerror] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleGetCharacter = (code) => {
     setLoading(true);
@@ -14,13 +14,13 @@ const Auth = () => {
       getCharacter(code)
         .then((response) => {
           setInStorage("character", JSON.stringify(response.character));
-          setSerror(false);
+          setError(false);
           setLoading(false);
           resolve("OK");
         })
         .catch((error) => {
           console.log("error", error);
-          setSerror(true);
+          setError(true);
           setLoading(false);
           resolve("error");
         });
@@ -28,7 +28,7 @@ const Auth = () => {
   };
 
   return (
-    <div className="auth">
+    <div className={styles.auth}>
       <Login
         loading={loading}
         error={error}
@@ -37,5 +37,3 @@ const Auth = () => {
     </div>
   );
 };
-
-export default Auth;
