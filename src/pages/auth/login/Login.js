@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { AuthorizationContext } from "../../context/authorizationContext";
+import { AuthorizationContext } from "../../../context/authorizationContext";
 import PropTypes from "prop-types";
 import { Header } from "./header/Header";
 import { Actions } from "./actions/Actions";

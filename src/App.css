@@ -52,14 +52,6 @@ p {
   border-radius: 4px;
 }
 
-.button--positive {
-  background-color: #9ba195;
-}
-
-.button--negative {
-  background-color: #95a1a1;
-}
-
 @media (min-width: 1440px) {
   h1 {
     font-size: 36px;
