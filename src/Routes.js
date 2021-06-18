@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Switch, Route } from "react-router-dom";
 import { AuthorizationContext } from "./context/authorizationContext";
-import Auth from "./pages/auth/Auth";
+import { Auth } from "./pages/auth/Auth";
 import { Layout } from "./Layout";
 import { Page } from "./Page";
 

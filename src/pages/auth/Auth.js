@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import { AuthorizationContext } from "../../context/authorizationContext";
-import { getCharacter } from "../../services/characterCrud";
-import Login from "../../components/login/Login";
-import "./Auth.css";
+import { getCharacter } from "../../resources/characters/index";
+import { Login } from "./login/Login";
+import styles from "./auth.module.css";
 
-const Auth = () => {
+export const Auth = () => {
   const { onSetCharacter } = useContext(AuthorizationContext);
   const [loading, setLoading] = useState(false);
-  const [error, setSerror] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleGetCharacter = (code) => {
     setLoading(true);
@@ -15,12 +15,13 @@ const Auth = () => {
       getCharacter(code)
         .then((response) => {
           onSetCharacter(response.character);
-          setSerror(false);
+          setError(false);
           setLoading(false);
           resolve("OK");
         })
         .catch((error) => {
-          setSerror(true);
+          console.log("error", error);
+          setError(true);
           setLoading(false);
           resolve("error");
         });
@@ -28,7 +29,7 @@ const Auth = () => {
   };
 
   return (
-    <div className="auth">
+    <div className={styles.auth}>
       <Login
         loading={loading}
         error={error}
@@ -37,5 +38,3 @@ const Auth = () => {
     </div>
   );
 };
-
-export default Auth;
