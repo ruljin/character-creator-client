@@ -1,8 +1,11 @@
 import React from "react";
-import CharacterSheet from "../../components/character-sheet/CharacterSheet";
+import { CharacterSheet } from "./character_sheet/CharacterSheet";
+import styles from "./character.module.css";
 
-const Character = () => {
-  return <CharacterSheet />;
+export const Character = () => {
+  return (
+    <div className={styles.character}>
+      <CharacterSheet />
+    </div>
+  );
 };
-
-export default Character;
