@@ -1,4 +1,14 @@
+@import "../../variables.css";
+
 .column {
   display: flex;
   flex-direction: column;
+}
+
+.large {
+  width: 320px;
+}
+
+.medium {
+  width: 150px;
 }
