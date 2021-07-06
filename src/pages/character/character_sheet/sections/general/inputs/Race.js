@@ -2,12 +2,12 @@ import styles from "../../../../character.module.css";
 
 export const Race = () => {
   return (
-    <div>
-      <label>
-        Race
-        <input />
+    <div className={styles.input__wrapper}>
+      <label className={styles.label}>
+        Race *
+        <input className={styles.input} placeholder="Race" />
       </label>
-      <div>error</div>
+      <div className={styles.error}>Race is required!</div>
     </div>
   );
 };

@@ -16,20 +16,20 @@ export const General = () => {
     <section className={styles.section}>
       <h2 className={styles.header}>General</h2>
       <ThematicBreak />
-      <Column>
+      <Column size="large">
         <Row>
           <Name />
         </Row>
         <Row>
-          <Column>
+          <Column className={styles.column} size="medium">
             <Race />
             <Class />
-            <Row>
+            <Row className={styles.row}>
               <Height />
               <Weight />
             </Row>
           </Column>
-          <Column>
+          <Column size="medium">
             <Gender />
             <Alignment />
             <Description />
