@@ -3,8 +3,8 @@ import styles from "../../../character.module.css";
 
 export const Statistics = () => {
   return (
-    <section>
-      <h2>Statistics</h2>
+    <section className={styles.section}>
+      <h2 className={styles.header}>Statistics</h2>
       <ThematicBreak />
     </section>
   );
