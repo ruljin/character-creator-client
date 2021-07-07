@@ -1,13 +1,15 @@
 import styles from "../../../../character.module.css";
 
-export const Height = () => {
+export const Weight = () => {
   return (
     <div className={styles.input__wrapper}>
       <label className={styles.label}>
-        Height
+        Weight
         <input
           className={`${styles.input} ${styles.input__small}`}
-          placeholder="Height"
+          type="number"
+          placeholder="Weight"
+          step={0.1}
         />
       </label>
     </div>
