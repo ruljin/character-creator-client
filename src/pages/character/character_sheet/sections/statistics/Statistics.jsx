@@ -1,6 +1,6 @@
 import { ThematicBreak } from "../../../../../components/thematic_break/ThematicBreak";
-import { Column } from "../../../../../components/column/Column.js";
-import { Row } from "../../../../../components/row/Row.js";
+import { Column } from "../../../../../components/column/Column";
+import { Row } from "../../../../../components/row/Row";
 import { Strength } from "./inputs/Strength";
 import { Consitution } from "./inputs/Consitution";
 import { Dexterity } from "./inputs/Dexterity";
