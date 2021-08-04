@@ -17,6 +17,18 @@
   background-color: #95a1a1;
 }
 
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  margin: 0 0 0 4px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
 @media (min-width: 1440px) {
   .button {
     height: 30px;
