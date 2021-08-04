@@ -1,12 +1,20 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
+import {
+  AuthorizationProvider,
+  useAuthorization,
+} from "./context/authorizationContext";
 import { Routes } from "./Routes";
 
 function App() {
+  const authorization = useAuthorization();
+
   return (
-    <Router>
-      <Routes />
-    </Router>
+    <AuthorizationProvider value={authorization}>
+      <Router>
+        <Routes />
+      </Router>
+    </AuthorizationProvider>
   );
 }
 

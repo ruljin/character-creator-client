@@ -1,0 +1,20 @@
+:root {
+  /* WIDTHS */
+  --full-width: 100%;
+  --half-width: 50%;
+
+  /* COLORS */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-sapling: #dfdaae;
+  --color-crimson: #dc143c;
+  --color-break: #9b95a1;
+
+  /* FONT-SIZE */
+  --font-small: 12px;
+  --font-standard: 14px;
+
+  /* FONT-WEIGHT */
+  --weight-standard: 400;
+  --weight-bold: 600;
+}

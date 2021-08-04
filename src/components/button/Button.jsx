@@ -12,6 +12,7 @@ export const Button = ({
   const classes = clsx(styles.button, {
     [styles.primary]: variant === "primary",
     [styles.secondary]: variant === "secondary",
+    [styles.label]: variant === "label",
   });
 
   return (

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "../../auth.module.css";
 
 export const GithubLink = ({ url, profileName }) => {
@@ -6,4 +7,9 @@ export const GithubLink = ({ url, profileName }) => {
       {profileName}
     </a>
   );
+};
+
+GithubLink.propTypes = {
+  url: PropTypes.string,
+  profileName: PropTypes.string,
 };

@@ -11,6 +11,10 @@
   position: absolute;
 }
 
+.top {
+  top: -62.5px;
+}
+
 .bottom {
   bottom: -62.5px;
 }
