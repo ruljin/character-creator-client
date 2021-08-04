@@ -15,8 +15,8 @@ export const CharacterSheet = ({ formData }) => {
             alignments={formData.alignments}
           />
           <Statistics />
-          <Skills />
-          <Spells />
+          <Skills skills={formData.skills} />
+          <Spells spells={formData.spells} />
         </>
       ) : null}
     </form>
