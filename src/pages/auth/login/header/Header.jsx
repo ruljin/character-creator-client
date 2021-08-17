@@ -1,9 +1,12 @@
-import styles from "../../auth.module.css";
+import { useTranslation } from 'react-i18next';
+import styles from '../../auth.module.css';
 
 export const Header = () => {
-  return (
-    <div className={styles.header}>
-      <h1>Character creator</h1>
-    </div>
-  );
+	const { t } = useTranslation(['general']);
+
+	return (
+		<div className={styles.header}>
+			<h1>{t('character creator')}</h1>
+		</div>
+	);
 };
