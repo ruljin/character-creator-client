@@ -1,21 +1,21 @@
-import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {
-  AuthorizationProvider,
-  useAuthorization,
-} from "./context/authorizationContext";
-import { Routes } from "./Routes";
+	AuthorizationProvider,
+	useAuthorization,
+} from './context/authorizationContext';
+import { Routes } from './Routes';
 
 function App() {
-  const authorization = useAuthorization();
+	const authorization = useAuthorization();
 
-  return (
-    <AuthorizationProvider value={authorization}>
-      <Router>
-        <Routes />
-      </Router>
-    </AuthorizationProvider>
-  );
+	return (
+		<AuthorizationProvider value={authorization}>
+			<Router>
+				<Routes />
+			</Router>
+		</AuthorizationProvider>
+	);
 }
 
 export default App;
