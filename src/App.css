@@ -42,7 +42,7 @@ p {
 }
 
 .input:disabled {
-	color: not-allowed;
+	cursor: not-allowed;
 }
 
 .input:disabled::placeholder {
