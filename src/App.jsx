@@ -4,7 +4,7 @@ import {
 	AuthorizationProvider,
 	useAuthorization,
 } from './context/authorizationContext';
-import { Routes } from './Routes';
+import { Routes } from './routes/Routes';
 
 function App() {
 	const authorization = useAuthorization();
