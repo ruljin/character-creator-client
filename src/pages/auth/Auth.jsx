@@ -19,8 +19,7 @@ export const Auth = () => {
 					setLoading(false);
 					resolve('OK');
 				})
-				.catch((error) => {
-					console.log('error', error);
+				.catch(() => {
 					setError(true);
 					setLoading(false);
 					resolve('error');
