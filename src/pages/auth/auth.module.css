@@ -1,114 +1,124 @@
 .auth {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .auth::after {
-  content: "";
-  background: url("../../assets/dragon__wallpaper.jpg");
-  opacity: 0.8;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-position: -440px -360px;
+	content: '';
+	background: url('../../assets/dragon__wallpaper.jpg');
+	opacity: 0.8;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-position: -440px -360px;
 }
 
 .login {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 310px;
-  height: 310px;
-  z-index: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 310px;
+	height: 310px;
+	z-index: 1;
 }
 
 .login::after {
-  content: "";
-  position: absolute;
-  width: 310px;
-  height: 310px;
-  top: 0;
-  background: rgba(161, 149, 149, 0.7);
-  filter: blur(4px);
-  z-index: -1;
+	content: '';
+	position: absolute;
+	width: 310px;
+	height: 310px;
+	top: 0;
+	background: rgba(161, 149, 149, 0.7);
+	filter: blur(4px);
+	z-index: -1;
 }
 
 .header {
-  margin-top: 25px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	margin-top: 25px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .actions {
-  display: contents;
+	display: contents;
 }
 
 .errors {
-  min-height: 18px;
-  font-size: 12px;
-  line-height: 19px;
-  color: #dc143c;
-  text-shadow: 0px 4px 4px rgba(220, 20, 60, 0.5);
-  margin-bottom: 40px;
+	min-height: 18px;
+	font-size: 12px;
+	line-height: 19px;
+	color: #dc143c;
+	text-shadow: 0px 4px 4px rgba(220, 20, 60, 0.5);
+	margin-bottom: 40px;
 }
 
 .copyrights {
-  font-size: 12px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	bottom: 23px;
+	font-size: 12px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .link {
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 .link:hover {
-  transition: 0.5s;
-  color: #9ba195;
+	transition: 0.5s;
+	color: #9ba195;
+}
+
+@media (min-width: 1100px) and (max-width: 1439px) {
+	.auth::after {
+		background-position: 0px -25px;
+		background-size: cover;
+	}
 }
 
 @media (min-width: 1440px) {
-  .auth {
-    align-items: flex-start;
-  }
+	.auth {
+		align-items: flex-start;
+	}
 
-  .auth::after {
-    background-position: unset;
-    background-size: cover;
-  }
+	.auth::after {
+		background-position: unset;
+		background-size: cover;
+	}
 
-  .login {
-    width: 515px;
-    height: 460px;
-    padding-left: 50px;
-  }
+	.login {
+		width: 515px;
+		height: 460px;
+		padding-left: 50px;
+	}
 
-  .login::after {
-    width: 515px;
-    height: 460px;
-  }
+	.login::after {
+		width: 515px;
+		height: 460px;
+	}
 
-  .header {
-    margin-top: 70px;
-    margin-bottom: 30px;
-  }
+	.header {
+		margin-top: 70px;
+		margin-bottom: 30px;
+	}
 
-  .errors {
-    font-size: 18px;
-    margin-bottom: 55px;
-  }
+	.errors {
+		font-size: 18px;
+		margin-bottom: 55px;
+	}
 
-  .copyrights {
-    font-size: 18px;
-  }
+	.copyrights {
+		bottom: 20;
+		font-size: 18px;
+	}
 }
