@@ -1,7 +1,5 @@
 export const handleError = (response) => {
-  if (!response.ok) {
-    throw Error(response.statusText);
-  }
-
-  return response.json();
+	return response.text().then((text) => {
+		throw Error(JSON.parse(text).error);
+	});
 };
